@@ -93,7 +93,7 @@ layout: default
             <div>
                 <section>
                     <h2>Get in touch</h2>
-                    <form method="post" action="'https://script.google.com/macros/s/AKfycbz8sJfECnrzOEXHO7ZwQXa5d7YqKEhIlvCP8F_1hFM73OMIEF3Ys6syfjKwehDCBJv0Dw/exec';">
+                    <form id="contact-form" method="post" action="#">
                         <div class="field half first">
                             <input type="text" name="name" id="name" placeholder="Name"/>
                         </div>
@@ -113,3 +113,31 @@ layout: default
         </div>
     </footer>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Evitar la acción predeterminada de enviar el formulario
+
+      var formData = new FormData(form);
+      var xhr = new XMLHttpRequest();
+
+      xhr.open('POST', 'https://script.google.com/macros/s/AKfycbz8sJfECnrzOEXHO7ZwQXa5d7YqKEhIlvCP8F_1hFM73OMIEF3Ys6syfjKwehDCBJv0Dw/exec', true);
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          // Manejar la respuesta del servidor, por ejemplo:
+          var response = JSON.parse(xhr.responseText);
+          console.log(response);
+
+          // Restablecer el formulario si es necesario
+          form.reset();
+        } else {
+          console.error('Hubo un error al enviar el formulario.');
+        }
+      };
+      xhr.send(formData);
+    });
+  });
+</script>
