@@ -5,16 +5,16 @@
 <!--[if lte IE 8]>
 <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 
-<link rel="stylesheet" href="assets/css/main.min.css"/>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.min.css"/>
 
-<!-- TU CSS PERSONAL (SIEMPRE DESPUÉS DEL MAIN) -->
-<link rel="stylesheet" href="assets/css/custom.css"/>
+<!-- TU CSS PERSONAL -->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css"/>
 
 <!--[if lte IE 9]>
-<link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie9.css"/><![endif]-->
 
 <!--[if lte IE 8]>
-<link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie8.css"/><![endif]-->
 
 <!-- ===================== -->
 <!-- GOOGLE ANALYTICS (GA4) -->
@@ -31,7 +31,7 @@
 {% endif %}
 
 <!-- ===================== -->
-<!-- MENU LIMPIO (ESTILO PHOTORAMA) -->
+<!-- MENU LIMPIO -->
 <!-- ===================== -->
 
 <nav class="main-menu">
@@ -39,25 +39,25 @@
   <ul class="menu-root">
 
     <li class="menu-item">
-      <a href="/">Home</a>
+      <a href="{{ site.baseurl }}/">Home</a>
     </li>
 
     <li class="menu-item dropdown">
       <a href="#">Gallery ▾</a>
 
       <ul class="dropdown-menu">
-        <li><a href="/urban">Urban</a></li>
-        <li><a href="/people">People</a></li>
-        <li><a href="/animals">Animals</a></li>
-        <li><a href="/vegetation">Vegetation</a></li>
-        <li><a href="/landscapes">Landscapes</a></li>
-        <li><a href="/objects">Objects</a></li>
+        <li><a href="{{ site.baseurl }}/urban">Urban</a></li>
+        <li><a href="{{ site.baseurl }}/people">People</a></li>
+        <li><a href="{{ site.baseurl }}/animals">Animals</a></li>
+        <li><a href="{{ site.baseurl }}/vegetation">Vegetation</a></li>
+        <li><a href="{{ site.baseurl }}/landscapes">Landscapes</a></li>
+        <li><a href="{{ site.baseurl }}/objects">Objects</a></li>
       </ul>
 
     </li>
 
     <li class="menu-item">
-      <a href="/about">About</a>
+      <a href="{{ site.baseurl }}/about">About</a>
     </li>
 
   </ul>
