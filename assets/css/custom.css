@@ -1,3 +1,4 @@
+
 /* ===================== */
 /* MAIN MENU */
 /* ===================== */
@@ -13,7 +14,6 @@
 
 body {
   padding-top: 60px;
-  padding-bottom: 0 !important;
   margin: 0;
   background: #000;
   overflow-x: hidden;
@@ -64,14 +64,7 @@ body {
 
   transform: translateY(-10px);
 
-  transition: 
-    max-height 0.45s ease,
-    opacity 0.25s ease,
-    transform 0.35s ease;
-}
-
-.dropdown-menu li {
-  width: 100%;
+  transition: all 0.4s ease;
 }
 
 .dropdown-menu li a {
@@ -85,7 +78,6 @@ body {
   padding-left: 22px;
 }
 
-/* aparece suave hacia abajo */
 .dropdown:hover .dropdown-menu {
   max-height: 500px;
   opacity: 1;
@@ -93,7 +85,7 @@ body {
 }
 
 /* ===================== */
-/* HERO SLIDER CINEMÁTICO REAL (SIN REBOTE) */
+/* HERO SLIDER PHOTORAMA REAL */
 /* ===================== */
 
 .hero-slider {
@@ -107,7 +99,7 @@ body {
   background: #000;
 }
 
-/* SLIDE BASE */
+/* cada imagen */
 .slide {
   position: absolute;
   width: 100%;
@@ -117,31 +109,44 @@ body {
   background-position: center;
 
   opacity: 0;
+  transition: opacity 2.2s ease-in-out;
 
-  /* estado base estable */
-  transform: scale(1.20) translate3d(0,0,0);
-
-  transition:
-    opacity 2.8s ease-in-out,
-    transform 6s ease-in-out;
+  /* movimiento continuo sin reset */
+  animation: zoomPan 18s ease-in-out infinite;
 }
 
-/* SLIDE ACTIVO */
+/* visible */
 .slide.active {
   opacity: 1;
-
-  /* movimiento suave continuo (sin reset) */
-  transform: scale(1.08) translate3d(-10px, -6px, 0);
 }
 
-/* SLIDE INACTIVO */
-.slide:not(.active) {
-  opacity: 0;
-  transform: scale(1.22) translate3d(10px, 6px, 0);
-  pointer-events: none;
+/* 🔥 movimiento cinematográfico real */
+@keyframes zoomPan {
+  0% {
+    transform: scale(1.15) translate3d(0,0,0);
+    filter: brightness(0.85);
+  }
+
+  25% {
+    transform: scale(1.10) translate3d(-10px, -6px, 0);
+    filter: brightness(1);
+  }
+
+  50% {
+    transform: scale(1.12) translate3d(8px, 4px, 0);
+  }
+
+  75% {
+    transform: scale(1.08) translate3d(-6px, 6px, 0);
+  }
+
+  100% {
+    transform: scale(1.15) translate3d(0,0,0);
+    filter: brightness(0.9);
+  }
 }
 
-/* overlay cinematográfico */
+/* overlay cine */
 .hero-slider::after {
   content: "";
   position: absolute;
@@ -149,8 +154,8 @@ body {
   height: 100%;
   background: radial-gradient(
     circle at center,
-    rgba(0,0,0,0.15),
-    rgba(0,0,0,0.70)
+    rgba(0,0,0,0.10),
+    rgba(0,0,0,0.75)
   );
   top: 0;
   left: 0;
@@ -207,12 +212,10 @@ body {
     position: relative;
     max-height: 0;
     opacity: 0;
-    transform: translateY(-10px);
   }
 
   .dropdown:hover .dropdown-menu {
     max-height: 400px;
     opacity: 1;
-    transform: translateY(0);
   }
 }
