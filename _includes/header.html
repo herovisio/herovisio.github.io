@@ -25,41 +25,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', '{{ site.google_analytics }}');
 </script>
 {% endif %}
-
-<!-- ===================== -->
-<!-- MENU LIMPIO -->
-<!-- ===================== -->
-
-<nav class="main-menu">
-
-  <ul class="menu-root">
-
-    <li class="menu-item">
-      <a href="{{ site.baseurl }}/">Home</a>
-    </li>
-
-    <li class="menu-item dropdown">
-      <a href="#">Gallery ▾</a>
-
-      <ul class="dropdown-menu">
-        <li><a href="{{ site.baseurl }}/urban">Urban</a></li>
-        <li><a href="{{ site.baseurl }}/people">People</a></li>
-        <li><a href="{{ site.baseurl }}/animals">Animals</a></li>
-        <li><a href="{{ site.baseurl }}/vegetation">Vegetation</a></li>
-        <li><a href="{{ site.baseurl }}/landscapes">Landscapes</a></li>
-        <li><a href="{{ site.baseurl }}/objects">Objects</a></li>
-      </ul>
-
-    </li>
-
-    <li class="menu-item">
-      <a href="{{ site.baseurl }}/about">About</a>
-    </li>
-
-  </ul>
-
-</nav>
