@@ -45,7 +45,7 @@ body {
 }
 
 /* ===================== */
-/* DROPDOWN SUAVE (SIN BRINCO) */
+/* DROPDOWN SUAVE */
 /* ===================== */
 
 .dropdown-menu {
@@ -70,6 +70,10 @@ body {
     transform 0.35s ease;
 }
 
+.dropdown-menu li {
+  width: 100%;
+}
+
 .dropdown-menu li a {
   padding: 12px 15px;
   white-space: nowrap;
@@ -89,7 +93,7 @@ body {
 }
 
 /* ===================== */
-/* HERO SLIDER (CINEMÁTICO REAL) */
+/* HERO SLIDER CINEMÁTICO REAL (SIN REBOTE) */
 /* ===================== */
 
 .hero-slider {
@@ -114,35 +118,27 @@ body {
 
   opacity: 0;
 
-  /* IMPORTANTE: transición continua */
-  transform: scale(1.15);
-  transition: opacity 2.5s ease-in-out;
+  /* estado base estable */
+  transform: scale(1.20) translate3d(0,0,0);
+
+  transition:
+    opacity 2.8s ease-in-out,
+    transform 6s ease-in-out;
 }
 
 /* SLIDE ACTIVO */
 .slide.active {
   opacity: 1;
 
-  /* movimiento continuo suave */
-  animation: kenburns 8s ease-in-out forwards;
+  /* movimiento suave continuo (sin reset) */
+  transform: scale(1.08) translate3d(-10px, -6px, 0);
 }
 
-/* 🔥 KEN BURNS REAL (SIN RESET BRUSCO) */
-@keyframes kenburns {
-  0% {
-    transform: scale(1.15) translate3d(0, 0, 0);
-    filter: brightness(0.85);
-  }
-
-  50% {
-    transform: scale(1.07) translate3d(-10px, -6px, 0);
-    filter: brightness(1);
-  }
-
-  100% {
-    transform: scale(1.12) translate3d(8px, 4px, 0);
-    filter: brightness(0.9);
-  }
+/* SLIDE INACTIVO */
+.slide:not(.active) {
+  opacity: 0;
+  transform: scale(1.22) translate3d(10px, 6px, 0);
+  pointer-events: none;
 }
 
 /* overlay cinematográfico */
@@ -174,7 +170,7 @@ body {
 }
 
 /* ===================== */
-/* FOOTER MINIMAL PRO */
+/* FOOTER LIMPIO */
 /* ===================== */
 
 #footer-custom {
@@ -211,10 +207,12 @@ body {
     position: relative;
     max-height: 0;
     opacity: 0;
+    transform: translateY(-10px);
   }
 
   .dropdown:hover .dropdown-menu {
     max-height: 400px;
     opacity: 1;
+    transform: translateY(0);
   }
 }
