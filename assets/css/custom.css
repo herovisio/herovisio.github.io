@@ -109,3 +109,36 @@ body {
   font-family: Arial, sans-serif;
   text-transform: uppercase;
 }
+/* ===================== */
+/* OCULTAR FOOTER ORIGINAL DEL TEMPLATE */
+/* ===================== */
+
+#header {
+  display: none !important;
+}
+
+/* elimina espacio inferior viejo */
+body {
+  padding-bottom: 0 !important;
+}
+
+/* ===================== */
+/* NUEVO FOOTER */
+/* ===================== */
+
+#footer-custom {
+  width: 100%;
+  background: rgba(0,0,0,0.92);
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+}
+
+#footer-custom p {
+  margin: 0;
+  color: #777;
+  font-size: 12px;
+  letter-spacing: 4px;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
