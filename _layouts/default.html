@@ -1,12 +1,19 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     {% include header.html %}
 </head>
+
 <body>
 
-    {{ content }}
-    
+    <!-- WRAPPER PRINCIPAL (evita conflictos del template viejo) -->
+    <div id="wrapper">
+
+        {{ content }}
+
+    </div>
+
     {% include footer.html %}
+
 </body>
 </html>
