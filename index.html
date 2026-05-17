@@ -15,12 +15,24 @@ layout: default
 
 <!-- SCRIPT SLIDER -->
 <script>
-let slides = document.querySelectorAll(".slide");
+const slides = document.querySelectorAll(".slide");
 let index = 0;
 
-setInterval(() => {
-    slides[index].classList.remove("active");
+function nextSlide() {
+    const current = slides[index];
+
+    // prepara siguiente
     index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
-}, 4000);
+    const next = slides[index];
+
+    // activa siguiente primero
+    next.classList.add("active");
+
+    // luego desactiva actual (suave)
+    setTimeout(() => {
+        current.classList.remove("active");
+    }, 1200);
+}
+
+setInterval(nextSlide, 5500);
 </script>
