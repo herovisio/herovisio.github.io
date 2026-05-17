@@ -2,6 +2,33 @@
 layout: default
 ---
 
+<!-- MAIN MENU / LOGO -->
+<nav class="main-menu">
+
+  <div class="logo">
+    <a href="/">
+      <img src="/images/logo-herovisio.png" alt="HEROVISIO">
+    </a>
+  </div>
+
+  <ul>
+    <li class="dropdown">
+      <a href="#">Gallery ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="/urban">Urban</a></li>
+        <li><a href="/people">People</a></li>
+        <li><a href="/animals">Animals</a></li>
+        <li><a href="/vegetation">Vegetation</a></li>
+        <li><a href="/landscapes">Landscapes</a></li>
+        <li><a href="/objects">Objects</a></li>
+      </ul>
+    </li>
+
+    <li><a href="/about">About</a></li>
+
+  </ul>
+</nav>
+
 <!-- HERO SLIDER -->
 <div class="hero-slider">
 
@@ -25,9 +52,6 @@ layout: default
 
     <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/ve_cadillo.jpg')"></div>
 
-    
-    
-
 </div>
 
 <!-- SCRIPT SLIDER -->
@@ -38,14 +62,11 @@ let index = 0;
 function nextSlide() {
     const current = slides[index];
 
-    // prepara siguiente
     index = (index + 1) % slides.length;
     const next = slides[index];
 
-    // activa siguiente primero
     next.classList.add("active");
 
-    // luego desactiva actual (suave)
     setTimeout(() => {
         current.classList.remove("active");
     }, 1200);
