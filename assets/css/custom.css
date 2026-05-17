@@ -1,10 +1,19 @@
+/* ===================== */
+/* MAIN MENU PHOTORAMA */
+/* ===================== */
+
 .main-menu {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: rgba(0,0,0,0.85);
-  z-index: 9999;
+  z-index: 99999;
+}
+
+/* evita que el contenido quede debajo del menú */
+body {
+  padding-top: 60px;
 }
 
 .main-menu ul {
@@ -24,11 +33,17 @@
   color: white;
   text-decoration: none;
   font-family: Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
 .main-menu ul li a:hover {
   background: #111;
 }
+
+/* ===================== */
+/* DROPDOWN MENU */
+/* ===================== */
 
 .dropdown-menu {
   display: none;
@@ -37,12 +52,36 @@
   left: 0;
   background: rgba(0,0,0,0.95);
   min-width: 180px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.dropdown-menu li {
+  width: 100%;
 }
 
 .dropdown-menu li a {
   padding: 12px 15px;
+  display: block;
+  white-space: nowrap;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
+}
+
+/* ===================== */
+/* RESPONSIVE BASIC */
+/* ===================== */
+
+@media screen and (max-width: 768px) {
+
+  .main-menu ul {
+    flex-direction: column;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+  }
+
 }
