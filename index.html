@@ -2,33 +2,25 @@
 layout: default
 ---
 
-<!-- Wrapper -->
-<div id="wrapper">
+<!-- HERO SLIDER -->
+<div class="hero-slider">
 
-    <!-- Main -->
-    <div id="main" data-exif='{{ site.exif }}'>
+    <div class="slide active" style="background-image:url('{{ site.baseurl }}/images/fulls/la_moon.jpg')"></div>
 
-        {% for image in site.static_files %}
-        {% if image.path contains 'fulls' %}
+    <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/ur_archpark.jpg')"></div>
 
-        <article class="thumb">
-            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
-
-                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}"
-                     alt=""
-                     data-name="{{ image.name }}"/>
-
-            </a>
-        </article>
-
-        {% endif %}
-        {% endfor %}
-
-    </div>
+    <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/ve_cadillo.jpg')"></div>
 
 </div>
 
-<!-- CUSTOM FOOTER -->
-<footer id="footer-custom">
-    <p>Copyright © 2026 HEROVISIO</p>
-</footer>
+<!-- SCRIPT SLIDER -->
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 4000);
+</script>
