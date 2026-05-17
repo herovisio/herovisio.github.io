@@ -11,7 +11,6 @@
   z-index: 99999;
 }
 
-/* espacio para el menú */
 body {
   padding-top: 60px;
   padding-bottom: 0 !important;
@@ -27,12 +26,10 @@ body {
   display: flex;
 }
 
-/* items */
 .main-menu ul li {
   position: relative;
 }
 
-/* links */
 .main-menu ul li a {
   display: block;
   padding: 15px 20px;
@@ -47,7 +44,7 @@ body {
 }
 
 /* ===================== */
-/* DROPDOWN (ANIMADO SLIDE DOWN) */
+/* DROPDOWN ANIMADO */
 /* ===================== */
 
 .dropdown-menu {
@@ -60,7 +57,6 @@ body {
   display: flex;
   flex-direction: column;
 
-  /* oculto por defecto */
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -68,7 +64,6 @@ body {
   transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 
-/* items dropdown */
 .dropdown-menu li {
   width: 100%;
 }
@@ -79,20 +74,18 @@ body {
   transition: background 0.2s ease, padding-left 0.2s ease;
 }
 
-/* hover efecto suave */
 .dropdown-menu li a:hover {
   background: #111;
   padding-left: 25px;
 }
 
-/* mostrar dropdown */
 .dropdown:hover .dropdown-menu {
   max-height: 500px;
   opacity: 1;
 }
 
 /* ===================== */
-/* HERO SLIDER (PHOTORAMA STYLE) */
+/* HERO SLIDER CINEMÁTICO PRO */
 /* ===================== */
 
 .hero-slider {
@@ -105,29 +98,52 @@ body {
   z-index: 1;
 }
 
+/* SLIDE BASE */
 .slide {
   position: absolute;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
+
   opacity: 0;
-  transition: opacity 2s ease-in-out, transform 6s ease;
-  transform: scale(1.05);
+
+  /* zoom inicial fuerte */
+  transform: scale(1.2);
+
+  transition: opacity 2.8s ease-in-out;
 }
 
+/* SLIDE ACTIVO */
 .slide.active {
   opacity: 1;
-  transform: scale(1);
+  animation: cinematicMove 7s ease-in-out forwards;
 }
 
-/* overlay cinematográfico */
+/* ANIMACIÓN CINEMÁTICA */
+@keyframes cinematicMove {
+  0% {
+    transform: scale(1.2) translateX(0);
+    filter: blur(3px);
+  }
+  30% {
+    filter: blur(0px);
+  }
+  50% {
+    transform: scale(1.08) translateX(-12px);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+
+/* overlay estilo cine */
 .hero-slider::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.25);
+  background: rgba(0,0,0,0.28);
   top: 0;
   left: 0;
 }
@@ -144,7 +160,7 @@ body {
 }
 
 /* ===================== */
-/* FOOTER NUEVO LIMPIO */
+/* FOOTER NUEVO */
 /* ===================== */
 
 #footer-custom {
