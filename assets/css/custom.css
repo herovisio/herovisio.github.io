@@ -137,7 +137,6 @@ body {
 
   opacity: 0;
 
-  /* clave para evitar “snap back” */
   transform: scale(1.18);
   will-change: transform, opacity;
 
@@ -148,13 +147,10 @@ body {
 .slide.active {
   opacity: 1;
   transform: scale(1.08);
-}
-
-/* ANIMACIÓN SUAVE CONTINUA (SIN RESET VISUAL) */
-.slide.active {
   animation: cinematicFlow 8s ease-in-out forwards;
 }
 
+/* animación suave */
 @keyframes cinematicFlow {
   0% {
     transform: scale(1.12) translate3d(0,0,0);
@@ -180,7 +176,7 @@ body {
   }
 }
 
-/* overlay tipo cine */
+/* overlay cine */
 .hero-slider::after {
   content: "";
   position: absolute;
@@ -199,14 +195,20 @@ body {
 }
 
 /* ===================== */
-/* OCULTAR TEMPLATE ORIGINAL */
+/* OCULTAR TEMPLATE VIEJO (FIX REAL DEL FANTASMA) */
 /* ===================== */
 
 #header,
 #footer,
 .panel,
-#footer-panel {
+#footer-panel,
+nav:not(.main-menu),
+header:not(.main-menu),
+ul:not(.main-menu ul) {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 /* ===================== */
