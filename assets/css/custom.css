@@ -1,5 +1,5 @@
 /* ===================== */
-/* MAIN MENU PHOTORAMA */
+/* MAIN MENU */
 /* ===================== */
 
 .main-menu {
@@ -11,11 +11,11 @@
   z-index: 99999;
 }
 
-/* evita que el contenido quede debajo del menú */
 body {
   padding-top: 60px;
 }
 
+/* menú principal horizontal */
 .main-menu ul {
   margin: 0;
   padding: 0;
@@ -23,10 +23,12 @@ body {
   display: flex;
 }
 
+/* items */
 .main-menu ul li {
   position: relative;
 }
 
+/* links */
 .main-menu ul li a {
   display: block;
   padding: 15px 20px;
@@ -34,7 +36,6 @@ body {
   text-decoration: none;
   font-family: Arial, sans-serif;
   font-size: 14px;
-  letter-spacing: 0.5px;
 }
 
 .main-menu ul li a:hover {
@@ -42,35 +43,40 @@ body {
 }
 
 /* ===================== */
-/* DROPDOWN MENU */
+/* DROPDOWN (OCULTO POR DEFECTO) */
 /* ===================== */
 
 .dropdown-menu {
-  display: none;
+  display: none !important;   /* 🔥 fuerza oculto */
   position: absolute;
   top: 100%;
   left: 0;
   background: rgba(0,0,0,0.95);
   min-width: 180px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  flex-direction: column;
 }
 
+/* items del dropdown */
 .dropdown-menu li {
   width: 100%;
 }
 
 .dropdown-menu li a {
   padding: 12px 15px;
-  display: block;
   white-space: nowrap;
 }
 
+/* ===================== */
+/* SOLO SE MUESTRA AL PASAR EL CURSOR */
+/* ===================== */
+
 .dropdown:hover .dropdown-menu {
-  display: block;
+  display: flex !important;   /* 🔥 fuerza mostrar */
+  flex-direction: column;
 }
 
 /* ===================== */
-/* RESPONSIVE BASIC */
+/* RESPONSIVE */
 /* ===================== */
 
 @media screen and (max-width: 768px) {
@@ -81,7 +87,5 @@ body {
 
   .dropdown-menu {
     position: relative;
-    top: 0;
   }
-
 }
