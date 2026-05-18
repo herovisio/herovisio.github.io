@@ -348,3 +348,53 @@ body {
   transform: scale(1.03);
   filter: brightness(1.1);
 }
+/* ===================== */
+/* LIGHTBOX (FULL SCREEN) */
+/* ===================== */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease;
+  z-index: 999999;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+
+  border-radius: 8px;
+
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.lightbox.active img {
+  transform: scale(1);
+}
+
+/* botón cerrar */
+.lightbox::after {
+  content: "✕";
+  position: absolute;
+  top: 20px;
+  right: 25px;
+
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
