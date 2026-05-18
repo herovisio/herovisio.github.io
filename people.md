@@ -21,8 +21,8 @@ permalink: /people/
       <img src="{{ site.baseurl }}/images/fulls/pe_soccer.jpg" alt="People 3">
 
       <img src="{{ site.baseurl }}/images/fulls/pe_friends.jpg" alt="People 4">
-      <img src="{{ site.baseurl }}/images/fulls/pe_5.jpg" alt="People 5">
-      <img src="{{ site.baseurl }}/images/fulls/pe_6.jpg" alt="People 6">
+      <img src="{{ site.baseurl }}/images/fulls/pe_protection.jpg" alt="People 5">
+      <img src="{{ site.baseurl }}/images/fulls/pe_whitegold.jpg" alt="People 6">
 
     </div>
 
