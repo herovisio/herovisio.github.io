@@ -6,38 +6,44 @@ permalink: /about/
 
 <div class="page-content">
 
-# About Herovisio
+<div class="about-title">About Herovisio</div>
 
+<div class="about-text">
 Herovisio is a visual project focused on photography, cinematic aesthetics, and the exploration of light, color, and visual storytelling.
 
 This space is designed as a digital gallery where each image aims to communicate a feeling beyond what is simply seen.
+</div>
 
----
+<div class="section-title">Vision</div>
 
-## Vision
-
+<div class="about-text">
 To build a unique visual identity based on:
+</div>
 
-- cinematic aesthetics  
-- visual depth  
-- minimal storytelling  
+<ul class="about-list">
+<li>cinematic aesthetics</li>
+<li>visual depth</li>
+<li>minimal storytelling</li>
+</ul>
 
----
+<div class="section-title">Style</div>
 
-## Style
-
+<div class="about-text">
 Herovisio blends different visual approaches, including:
+</div>
 
-- urban photography  
-- portrait photography  
-- natural landscapes  
-- film-inspired cinematic aesthetics  
+<ul class="about-list">
+<li>urban photography</li>
+<li>portrait photography</li>
+<li>natural landscapes</li>
+<li>film-inspired cinematic aesthetics</li>
+</ul>
 
----
+<div class="section-title">Contact</div>
 
-## Contact
-
+<div class="about-text">
 Connect with Herovisio:
+</div>
 
 <div class="social-icons">
 <a href="https://www.facebook.com/Herovisio1/" target="_blank">
