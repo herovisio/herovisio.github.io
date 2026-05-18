@@ -1,18 +1,20 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html>
 <head>
     {% include header.html %}
 </head>
 
 <body>
 
-    <!-- WRAPPER PRINCIPAL (evita conflictos del template viejo) -->
-    <div id="wrapper">
+    <!-- MENU GLOBAL (SIEMPRE ARRIBA) -->
+    {% include menu.html %}
 
+    <!-- CONTENIDO DE CADA PÁGINA -->
+    <main class="page-wrapper">
         {{ content }}
+    </main>
 
-    </div>
-
+    <!-- FOOTER GLOBAL -->
     {% include footer.html %}
 
 </body>
