@@ -116,7 +116,7 @@ body {
 }
 
 /* ===================== */
-/* HERO SLIDER - PARALLAX PROFUNDO */
+/* HERO SLIDER */
 /* ===================== */
 
 .hero-slider {
@@ -130,17 +130,14 @@ body {
   background: #000;
 }
 
-/* SLIDE BASE */
 .slide {
   position: absolute;
   width: 100%;
   height: 100%;
-
   background-size: cover;
   background-position: center;
 
   opacity: 0;
-
   transform: scale(1.3) translate3d(0, 0, 0);
 
   will-change: transform, opacity;
@@ -150,17 +147,12 @@ body {
     transform 12s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* SLIDE ACTIVO */
 .slide.active {
   opacity: 1;
-
   transform: scale(1.12) translate3d(-25px, -12px, 0);
 }
 
-/* ===================== */
-/* OVERLAY CINEMATOGRÁFICO */
-/* ===================== */
-
+/* overlay */
 .hero-slider::after {
   content: "";
   position: absolute;
@@ -175,10 +167,7 @@ body {
   );
 }
 
-/* ===================== */
-/* GRAIN SUAVE */
-/* ===================== */
-
+/* grain */
 .hero-slider::before {
   content: "";
   position: absolute;
@@ -195,17 +184,17 @@ body {
 }
 
 /* ===================== */
-/* ABOUT PAGE CONTENT (MEJORADO PRO) */
+/* ABOUT PAGE (FIX PREMIUM) */
 /* ===================== */
 
 .page-content {
   position: relative;
   z-index: 10;
 
-  max-width: 760px;
+  max-width: 780px;
   margin: 0 auto;
 
-  padding: 120px 25px 120px 25px;
+  padding: 130px 25px 120px 25px;
 
   color: white;
 
@@ -215,31 +204,41 @@ body {
   text-align: center;
 }
 
-.page-content h1,
-.page-content h2,
-.page-content h3 {
-  color: white;
-  margin-bottom: 15px;
+/* títulos */
+.page-content h1 {
+  font-size: 34px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
 }
 
+.page-content h2 {
+  font-size: 20px;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  opacity: 0.95;
+}
+
+/* texto */
 .page-content p {
   color: rgba(255,255,255,0.75);
-  line-height: 1.7;
-  margin-bottom: 15px;
+  line-height: 1.8;
+  margin-bottom: 16px;
 }
 
+/* listas */
 .page-content ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .page-content ul li {
-  margin: 6px 0;
+  margin: 7px 0;
   color: rgba(255,255,255,0.75);
 }
 
 /* ===================== */
-/* SOCIAL ICONS (CENTRO PERFECTO) */
+/* SOCIAL ICONS */
 /* ===================== */
 
 .social-icons {
@@ -248,13 +247,13 @@ body {
   align-items: center;
 
   gap: 18px;
-  margin-top: 28px;
+  margin-top: 30px;
   width: 100%;
 }
 
 .social-icons a {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
 
   display: flex;
   align-items: center;
@@ -274,9 +273,9 @@ body {
 }
 
 .social-icons a:hover {
-  transform: translateY(-4px) scale(1.08);
-  border-color: rgba(255,255,255,0.85);
-  box-shadow: 0 0 18px rgba(255,255,255,0.15);
+  transform: translateY(-5px) scale(1.08);
+  border-color: rgba(255,255,255,0.9);
+  box-shadow: 0 0 20px rgba(255,255,255,0.15);
 }
 
 /* ===================== */
@@ -297,7 +296,7 @@ ul:not(.main-menu ul) {
 }
 
 /* ===================== */
-/* FOOTER LIMPIO */
+/* FOOTER */
 /* ===================== */
 
 #footer-custom {
