@@ -195,19 +195,23 @@ body {
 }
 
 /* ===================== */
-/* ABOUT PAGE CONTENT (NUEVO) */
+/* ABOUT PAGE CONTENT (MEJORADO PRO) */
 /* ===================== */
 
 .page-content {
   position: relative;
   z-index: 10;
 
-  max-width: 900px;
+  max-width: 760px;
   margin: 0 auto;
 
   padding: 120px 25px 120px 25px;
 
   color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
@@ -235,19 +239,22 @@ body {
 }
 
 /* ===================== */
-/* SOCIAL ICONS (ABOUT) */
+/* SOCIAL ICONS (CENTRO PERFECTO) */
 /* ===================== */
 
 .social-icons {
   display: flex;
   justify-content: center;
+  align-items: center;
+
   gap: 18px;
-  margin-top: 25px;
+  margin-top: 28px;
+  width: 100%;
 }
 
 .social-icons a {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
 
   display: flex;
   align-items: center;
@@ -267,8 +274,8 @@ body {
 }
 
 .social-icons a:hover {
-  transform: translateY(-4px) scale(1.05);
-  border-color: rgba(255,255,255,0.8);
+  transform: translateY(-4px) scale(1.08);
+  border-color: rgba(255,255,255,0.85);
   box-shadow: 0 0 18px rgba(255,255,255,0.15);
 }
 
