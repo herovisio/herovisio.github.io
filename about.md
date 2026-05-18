@@ -25,10 +25,12 @@ The work includes different subjects such as:
 </p>
 
 <ul>
-<li>urban photography</li>
-<li>portraits</li>
-<li>nature</li>
-<li>street moments</li>
+<li>urban</li>
+<li>people</li>
+<li>animals</li>
+<li>vegetation</li>
+<li>landscapes</li>
+<li>objects</li>
 </ul>
 
 </div>
