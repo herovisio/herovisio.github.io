@@ -21,7 +21,7 @@ permalink: /about/
   <h2>Style</h2>
 
   <ul>
-    <li>Urban scenes</li>
+    <li>Urban</li>
     <li>People</li>
     <li>Animals</li>
     <li>Vegetation</li>
