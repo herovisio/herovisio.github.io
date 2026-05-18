@@ -19,8 +19,8 @@ permalink: /urban/
 
       <img src="{{ site.baseurl }}/images/fulls/ur_bridge.jpg" alt="Urban 1">
       <img src="{{ site.baseurl }}/images/fulls/ur_bulma.jpg" alt="Urban 2">
-      <img src="{{ site.baseurl }}/images/fulls/ur_city.jpg" alt="Urban 3">
-      <img src="{{ site.baseurl }}/images/fulls/ur_night.jpg" alt="Urban 4">
+      <img src="{{ site.baseurl }}/images/fulls/ur_.wings.jpg" alt="Urban 3">
+      <img src="{{ site.baseurl }}/images/fulls/ur_archpark.jpg" alt="Urban 4">
 
     </div>
 
