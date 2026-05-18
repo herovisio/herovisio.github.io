@@ -103,7 +103,7 @@ body {
 }
 
 /* ===================== */
-/* HERO SLIDER */
+/* HERO SLIDER (CINEMATIC PRO) */
 /* ===================== */
 
 .hero-slider {
@@ -111,8 +111,10 @@ body {
   inset: 0;
   z-index: 1;
   pointer-events: none;
+  overflow: hidden;
 }
 
+/* SLIDES */
 .slide {
   position: absolute;
   inset: 0;
@@ -121,20 +123,50 @@ body {
   background-position: center;
 
   opacity: 0;
-  transition: opacity 2s ease;
+
+  /* profundidad base */
+  transform: scale(1.15) translate3d(0, 0, 0);
+
+  will-change: transform, opacity;
+
+  transition:
+    opacity 1.8s ease-in-out,
+    transform 6s ease-in-out;
 }
 
 .slide.active {
   opacity: 1;
+
+  /* movimiento tipo cámara */
+  transform: scale(1.05) translate3d(-10px, -6px, 0);
 }
 
-/* overlays */
-.hero-slider::after,
+/* overlays cine */
+.hero-slider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(0,0,0,0.05),
+    rgba(0,0,0,0.75)
+  );
+}
+
 .hero-slider::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 3;
+  pointer-events: none;
+
+  opacity: 0.05;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  background-size: cover;
+  mix-blend-mode: overlay;
 }
 
 /* ===================== */
@@ -245,19 +277,7 @@ body {
 }
 
 /* ===================== */
-/* FIX CAPAS */
-/* ===================== */
-
-.hero-slider {
-  z-index: 1;
-}
-
-.page-content {
-  z-index: 10;
-}
-
-/* ===================== */
-/* FOOTER (FIX IMPORTANTE) */
+/* FOOTER FIX FINAL */
 /* ===================== */
 
 #footer-custom {
@@ -271,7 +291,7 @@ body {
   background: rgba(0,0,0,0.9);
   padding: 10px 0;
 
-  z-index: 9999; /* 🔥 FIX CRÍTICO */
+  z-index: 9999;
 }
 
 #footer-custom p {
