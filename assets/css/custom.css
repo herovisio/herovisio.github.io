@@ -39,42 +39,173 @@ body {
 }
 
 /* ===================== */
-/* ABOUT FIX (IMPORTANTE) */
+/* MENU LINKS */
+/* ===================== */
+
+.main-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.main-menu ul li {
+  position: relative;
+}
+
+.main-menu ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.main-menu ul li a:hover {
+  background: #111;
+}
+
+/* ===================== */
+/* DROPDOWN */
+/* ===================== */
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0,0,0,0.95);
+  min-width: 180px;
+
+  display: flex;
+  flex-direction: column;
+
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+
+  transform: translateY(-8px);
+
+  transition: all 0.3s ease;
+
+  pointer-events: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-menu li a {
+  padding: 12px 15px;
+}
+
+/* ===================== */
+/* HERO SLIDER */
+/* ===================== */
+
+.hero-slider {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* overlays */
+.hero-slider::after,
+.hero-slider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* ===================== */
+/* ABOUT PAGE */
 /* ===================== */
 
 .page-content {
   position: relative;
-  z-index: 50;
+  z-index: 10;
 
   max-width: 760px;
   margin: 0 auto;
 
   padding: 120px 25px;
 
-  color: white;
   text-align: center;
+  color: white;
 }
 
-/* texto limpio */
-.page-content p,
-.page-content li {
+.page-content p {
   color: rgba(255,255,255,0.75);
   line-height: 1.7;
 }
 
-.page-content ul {
-  list-style: none;
-  padding: 0;
+.page-content h1,
+.page-content h2 {
+  margin-bottom: 15px;
 }
 
 /* ===================== */
-/* SOCIAL ICONS (VISIBLE + ANIMADOS) */
+/* STYLE CHIPS (HORIZONTAL) */
+/* ===================== */
+
+.page-content ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 0;
+  margin-top: 15px;
+}
+
+.page-content ul li {
+  list-style: none;
+
+  padding: 6px 14px;
+
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+
+  transition: 0.3s ease;
+}
+
+.page-content ul li:hover {
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+/* ===================== */
+/* SOCIAL ICONS */
 /* ===================== */
 
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 18px;
+
   margin-top: 30px;
 }
 
@@ -86,8 +217,8 @@ body {
   align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(255,255,255,0.3);
   border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.3);
 
   transition: 0.3s ease;
 }
@@ -98,7 +229,6 @@ body {
   fill: white;
 }
 
-/* animación real */
 .social-icons a:hover {
   transform: translateY(-5px) scale(1.1);
   border-color: white;
@@ -106,45 +236,55 @@ body {
 }
 
 /* ===================== */
-/* HERO SLIDER BACKGROUND FIX */
+/* FIX CAPAS (IMPORTANTE) */
 /* ===================== */
 
 .hero-slider {
-  position: fixed;
-  inset: 0;
   z-index: 1;
 }
 
-.slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 2s ease;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-/* evita que tape el contenido */
-.hero-slider::after,
-.hero-slider::before {
-  z-index: 0;
-}
-
-/* IMPORTANTÍSIMO */
-.hero-slider {
-  pointer-events: none;
+.page-content {
+  z-index: 10;
 }
 
 /* ===================== */
-/* OCULTAR VIEJO TEMPLATE */
+/* FOOTER */
 /* ===================== */
 
-#header,
-#footer,
-.panel {
-  display: none !important;
+#footer-custom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+
+  background: rgba(0,0,0,0.9);
+  padding: 10px 0;
+}
+
+#footer-custom p {
+  margin: 0;
+  color: #777;
+  font-size: 12px;
+}
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+
+@media screen and (max-width: 768px) {
+
+  .main-menu ul {
+    flex-direction: column;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    max-height: 400px;
+    opacity: 1;
+  }
 }
