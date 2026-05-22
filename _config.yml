@@ -2,6 +2,9 @@
 image_fulls_loc: "/images/fulls"
 image_thumbs_loc: "/images/thumbs"
 
+# Site URL (IMPORTANTE para SEO + sitemap)
+url: "https://herovisio.com"
+
 # Google Analytics (GA4)
 google_analytics: "G-FPC17X6JC2"
 
@@ -26,3 +29,15 @@ exif: '[{"tag": "Model", "icon": "camera-retro"}, {"tag": "FNumber", "icon": "do
 social_urls:
   facebook: ""
   instagram: "https://www.instagram.com/herovisio"
+
+# =====================
+# SEO + SITEMAP (NUEVO)
+# =====================
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO defaults (mejora Google)
+description: "Herovisio is a photography project focused on urban photography, people, nature, and visual storytelling."
+lang: "en"
