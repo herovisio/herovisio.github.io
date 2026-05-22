@@ -4,6 +4,7 @@ layout: default
 
 <!-- MAIN MENU / LOGO -->
 
+<nav class="main-menu">
 
   <div class="logo">
     <a href="{{ site.baseurl }}/">
@@ -12,8 +13,10 @@ layout: default
   </div>
 
   <ul class="menu-items">
+
     <li class="dropdown">
       <a href="#">Gallery ▾</a>
+
       <ul class="dropdown-menu">
         <li><a href="{{ site.baseurl }}/urban">Urban</a></li>
         <li><a href="{{ site.baseurl }}/people">People</a></li>
@@ -22,54 +25,49 @@ layout: default
         <li><a href="{{ site.baseurl }}/landscapes">Landscapes</a></li>
         <li><a href="{{ site.baseurl }}/objects">Objects</a></li>
       </ul>
+
     </li>
 
     <li><a href="{{ site.baseurl }}/about">About</a></li>
 
   </ul>
+
 </nav>
 
 <!-- HERO SLIDER -->
+
 <div class="hero-slider">
 
-    <div class="slide active" style="background-image:url('{{ site.baseurl }}/images/fulls/ve_pinkwings.jpg')"></div>
-
-    <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/pe_quinsmile.jpg')"></div>
-
-    <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/ve_forest.jpg')"></div>
-
-    <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/ur_bulma.jpg')"></div>
-
-    <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/pe_married.jpg')"></div>
-
-    <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/ur_bridge.jpg')"></div>
-
-    <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/an_gary.jpg')"></div>
-    
-    <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/la_moon.jpg')"></div>
-
-    <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/an_donduck.jpg')"></div>
-
-    <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/ve_cadillo.jpg')"></div>
+  <div class="slide active" style="background-image:url('{{ site.baseurl }}/images/fulls/ve_pinkwings.jpg')"></div>
+  <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/pe_quinsmile.jpg')"></div>
+  <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/ve_forest.jpg')"></div>
+  <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/ur_bulma.jpg')"></div>
+  <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/pe_married.jpg')"></div>
+  <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/ur_bridge.jpg')"></div>
+  <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/an_gary.jpg')"></div>
+  <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/la_moon.jpg')"></div>
+  <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/an_donduck.jpg')"></div>
+  <div class="slide" style="background-image:url('{{ site.baseurl }}/images/fulls/ve_cadillo.jpg')"></div>
 
 </div>
 
-<!-- SCRIPT SLIDER -->
+<!-- SLIDER SCRIPT -->
+
 <script>
 const slides = document.querySelectorAll(".slide");
 let index = 0;
 
 function nextSlide() {
-    const current = slides[index];
+  const current = slides[index];
 
-    index = (index + 1) % slides.length;
-    const next = slides[index];
+  index = (index + 1) % slides.length;
+  const next = slides[index];
 
-    next.classList.add("active");
+  next.classList.add("active");
 
-    setTimeout(() => {
-        current.classList.remove("active");
-    }, 1200);
+  setTimeout(() => {
+    current.classList.remove("active");
+  }, 1200);
 }
 
 setInterval(nextSlide, 5500);
