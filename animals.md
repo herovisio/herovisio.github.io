@@ -22,8 +22,8 @@ permalink: /animals/
       <img src="{{ site.baseurl }}/images/fulls/an_mrduck.jpg" alt="Animal 3">
 
       <img src="{{ site.baseurl }}/images/fulls/an_alvin.jpg" alt="Animal 4">
-      <img src="{{ site.baseurl }}/images/fulls/an_duck.jpg" alt="Animal 5">
-      <img src="{{ site.baseurl }}/images/fulls/an_squirrel.jpg" alt="Animal 6">
+      <img src="{{ site.baseurl }}/images/fulls/an_ralph.jpg" alt="Animal 5">
+      <img src="{{ site.baseurl }}/images/fulls/an_garyculo.jpg" alt="Animal 6">
 
     </div>
 
