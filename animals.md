@@ -19,7 +19,7 @@ permalink: /animals/
 
       <img src="{{ site.baseurl }}/images/fulls/an_gary.jpg" alt="Animal 1">
       <img src="{{ site.baseurl }}/images/fulls/an_donduck.jpg" alt="Animal 2">
-      <img src="{{ site.baseurl }}/images/fulls/an_bird.jpg" alt="Animal 3">
+      <img src="{{ site.baseurl }}/images/fulls/an_mrduck.jpg" alt="Animal 3">
 
       <img src="{{ site.baseurl }}/images/fulls/an_cat.jpg" alt="Animal 4">
       <img src="{{ site.baseurl }}/images/fulls/an_duck.jpg" alt="Animal 5">
