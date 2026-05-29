@@ -18,8 +18,8 @@ permalink: /landscapes/
     <div class="gallery-grid">
 
       <img src="{{ site.baseurl }}/images/fulls/la_moon.jpg" alt="Landscape 1">
-      <img src="{{ site.baseurl }}/images/fulls/la_sunset.jpg" alt="Landscape 2">
-      <img src="{{ site.baseurl }}/images/fulls/la_lake.jpg" alt="Landscape 3">
+      <img src="{{ site.baseurl }}/images/fulls/la_omanite.jpg" alt="Landscape 2">
+      <img src="{{ site.baseurl }}/images/fulls/la_downpark.jpg" alt="Landscape 3">
 
       <img src="{{ site.baseurl }}/images/fulls/la_mountains.jpg" alt="Landscape 4">
       <img src="{{ site.baseurl }}/images/fulls/la_clouds.jpg" alt="Landscape 5">
