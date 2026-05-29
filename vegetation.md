@@ -17,7 +17,7 @@ permalink: /vegetation/
     <!-- GRID GALERÍA -->
     <div class="gallery-grid">
 
-      <img src="{{ site.baseurl }}/images/fulls/ve_forest.jpg" alt="Vegetation 1">
+      <img src="{{ site.baseurl }}/images/fulls/ve_purple.jpg" alt="Vegetation 1">
       <img src="{{ site.baseurl }}/images/fulls/ve_pinkwings.jpg" alt="Vegetation 2">
       <img src="{{ site.baseurl }}/images/fulls/ve_cadillo.jpg" alt="Vegetation 3">
 
